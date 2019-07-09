@@ -1,0 +1,11 @@
+{
+  "name": "build-tree-datasource",
+  "version": "1.0.0",
+  "description": "构建常见UI树的dataSource",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lane",
+  "license": "ISC"
+}
