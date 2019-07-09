@@ -1,4 +1,6 @@
 ```
+import { buildTree } from "build-tree-datasource";
+
 const source = [
   {
     id: 1,
