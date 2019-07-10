@@ -1,5 +1,5 @@
 ```
-import { buildTree } from "build-tree-datasource";
+import buildTree from "build-tree-datasource";
 
 const source = [
   {
@@ -22,7 +22,7 @@ const source = [
     id: 3,
     parentId: 0,
     groupName: {
-      name: '经理3',v
+      name: '经理3',
       count: 2
     },
   },
@@ -62,7 +62,7 @@ const source = [
     id: 8,
     parentId: 2,
     groupName: {
-      name: '主管1',
+      name: '主管3',
       count: 0
     },
   },
@@ -70,10 +70,16 @@ const source = [
     id: 9,
     parentId: 3,
     groupName: {
-      name: '主管1',
+      name: '主管4',
       count: 0
     },
   },
 ];
+
+// 第一个参数为初始数组
+// 第二个参数为数组每个元素的唯一标识, 默认为id
+// 第三个参数为结点之间的链接标识，默认为parentId
+
 console.log(buildTree(source))
+console.log(buildTree(source, "id", "parentId"))
 ```
