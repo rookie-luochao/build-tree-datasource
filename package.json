@@ -1,19 +1,22 @@
 {
   "name": "build-tree-datasource",
-  "version": "1.0.1",
-  "description": "构建常见UI树的dataSource",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "build a dataSource for common ui trees",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf es/* cjs/*",
+    "build": "npm run prebuild && rollup -c"
   },
   "author": "lane",
   "license": "MIT",
   "types": "index.d.ts",
   "keywords": [
-    "build-tree-datasource",
     "build-tree",
+    "tree",
     "buildTree",
-    "tree"
+    "build-tree-datasource"
   ],
   "homepage": "https://github.com/rookie-luochao/build-tree-datasource#readme",
   "repository": {
@@ -22,5 +25,15 @@
   },
   "bugs": {
     "url": "https://github.com/rookie-luochao/build-tree-datasource/issues"
+  },
+  "files": [
+    "es/",
+    "cjs/",
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "rollup-plugin-babel": "^4.3.3"
   }
 }
