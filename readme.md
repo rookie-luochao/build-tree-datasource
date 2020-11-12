@@ -76,9 +76,9 @@ const source = [
   },
 ];
 
-// 第一个参数为初始数组
-// 第二个参数为数组每个元素的唯一标识, 默认为id
-// 第三个参数为结点之间的链接标识，默认为parentId
+// first param is init data(array)
+// second param is unique element ID, default is id
+// third param is link ID between nodes, default is parentId
 
 console.log(buildTree(source))
 console.log(buildTree(source, "id", "parentId"))
