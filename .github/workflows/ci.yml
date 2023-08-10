@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
+          registry-url: https://registry.npmjs.org/
+          cache: "npm"
       # 依赖缓存策略
       - name: Cache
         id: cache-dependencies
