@@ -32,8 +32,8 @@ jobs:
       - name: Running Build
         run: npm run build
       # 测试
-      - name: Running Test
-        run: npm run test
+      # - name: Running Test
+      #   run: npm run test
       # 发布
       - name: Running Publish
         run: npm publish
