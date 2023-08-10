@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  CI:
+  build:
     # 指定操作系统
     runs-on: ubuntu-latest
     steps:
