@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
       # 依赖缓存策略
       - name: Cache
         id: cache-dependencies
@@ -39,4 +40,4 @@ jobs:
         run: npm publish
         env:
           # NPM_TOKEN is access token
-         NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
